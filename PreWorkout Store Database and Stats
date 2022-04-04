@@ -1,0 +1,19 @@
+CREATE TABLE supplements (id INTEGER PRIMARY KEY, name TEXT, caffeine TEXT, rating INTEGER, price INTEGER );
+INSERT INTO supplements VALUES (1, "Total War", "375mg", 4, 45);
+INSERT INTO supplements VALUES (2, "Alani", "175mg", 4, 40);
+INSERT INTO supplements VALUES (3, "Flash Point", "200mg", 3, 29);
+INSERT INTO supplements VALUES (4, "RYSE", "350mg", 5, 45);
+INSERT INTO supplements VALUES (5, "GHOST LEGEND","250mg", 4, 45);
+INSERT INTO supplements VALUES (6, "Bucked Up", "175mg", 4, 25);
+INSERT INTO supplements VALUES (7, "C4", "200mg", 1, 40);
+INSERT INTO supplements VALUES (8, "Woke AF", "225mg", 2, 35);
+INSERT INTO supplements VALUES (9, "RYSE BLACKOUT", "400mg", 5, 40);
+INSERT INTO supplements VALUES (10, "NITRAFLEX", "150mg", 2, 40);
+INSERT INTO supplements VALUES (11, "Animal", "350mg", 5, 30);
+INSERT INTO supplements VALUES (12, "KAGED", "225mg", 4, 35);
+INSERT INTO supplements VALUES (13, "Prolific", "175mg", 4, 20);
+INSERT INTO supplements VALUES (14, "AMINO ENERGY", "150mg", 3, 20);
+INSERT INTO supplements VALUES (15, "BANG", "300mg", 3, 25);
+
+SELECT* FROM supplements ORDER BY price;
+SELECT price, SUM(price) FROM supplements GROUP BY price;
