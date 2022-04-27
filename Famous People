@@ -1,0 +1,34 @@
+/* Create table about the people and what they do here */
+CREATE TABLE persons (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+fullname TEXT,
+age INTEGER
+);
+
+INSERT INTO persons (fullname, age) VALUES ("Will Smith", "53");
+INSERT INTO persons (fullname, age) VALUES ("Gabrielle Union", "49");
+INSERT INTO persons (fullname, age) VALUES ("John Salley", "57");
+INSERT INTO persons (fullname, age) VALUES ("Joe Pantoliano", "70");
+INSERT INTO persons (fullname, age) VALUES ("Martin Lawrence", "56");
+INSERT INTO persons (fullname, age) VALUES ("Tom Hanks", "65");
+INSERT INTO persons (fullname, age) VALUES ("Denzel Washington", "67");
+INSERT INTO persons (fullname, age) VALUES ("Leonardo DiCaprio", "47");
+
+
+CREATE TABLE movies (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+person_id INTEGER,
+name TEXT,
+year INTEGER
+);
+
+INSERT INTO movies (person_id, name, year) VALUES (1, "Men In Black","1997");
+INSERT INTO movies (person_id, name, year) VALUES (2, "Bring It On","2000");
+INSERT INTO movies (person_id, name, year) VALUES (3, "The Ultimate Christmas Present","2000");
+INSERT INTO movies (person_id, name, year) VALUES (4, "The Goonies","1997");
+INSERT INTO movies (person_id, name, year) VALUES (5, "Big Mommas House","2000");
+INSERT INTO movies (person_id, name, year) VALUES (6, "Forest Gump","1994");
+INSERT INTO movies (person_id, name, year) VALUES (7, "Training Day","2001");
+INSERT INTO movies (person_id, name, year) VALUES (8, "Titanic","1997");
+
+SELECT persons.fullname AS Name, movies.name AS Movie_Name FROM persons JOIN movies ON persons.id = movies.person_id;
