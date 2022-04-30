@@ -1,0 +1,19 @@
+/* What does the app's SQL look like? */
+/*   */
+CREATE TABLE warzone (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT, score INTEGER, kills INTEGER, rank INTEGER);
+
+INSERT INTO warzone (name, score, kills, rank) VALUES ("Buddy4k", "2780", 21, 20);
+INSERT INTO warzone (name, score, kills, rank) VALUES ("Untearful", "4210", 25, 32);
+INSERT INTO warzone (name, score, kills, rank) VALUES ("itsGevver", "5420", 31, 31);
+INSERT INTO warzone (name, score, kills, rank) VALUES ("MrsGamz", "1240", 14, 23);
+INSERT INTO warzone (name, score, kills, rank) VALUES ("Bot", "100", 5, 8);
+
+SELECT * FROM warzone;
+
+UPDATE warzone SET kills = "7" WHERE id = 5;
+
+SELECT * FROM warzone;
+
+DELETE FROM warzone WHERE id = 5;
+
+SELECT * FROM warzone;
